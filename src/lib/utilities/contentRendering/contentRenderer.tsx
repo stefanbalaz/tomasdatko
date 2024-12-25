@@ -33,12 +33,15 @@ export default function contentRenderer(params: ContentRendererParams) {
 
     if (slugSecondLevelPage) {
       // Iterate through each first-level page to find the matching second-level page
-      for (const firstLevelPage of pageData.firstLevelPage) {
+      for (const firstLevelPage of pageData.firstLevelPage as any) {
         // Check if the first-level page has second-level pages
-        if (firstLevelPage.secondLevelPage) {
+        if (
+          firstLevelPage.hasOwnProperty("secondLevelPage") &&
+          firstLevelPage.secondLevelPage
+        ) {
           // Attempt to find the second-level page within the current first-level page
           const foundSecondLevelPage = firstLevelPage.secondLevelPage.find(
-            (page) => page.url === slugSecondLevelPage
+            (page: any) => page.url === slugSecondLevelPage
           );
           // If found, return the second-level page
           if (foundSecondLevelPage) {
