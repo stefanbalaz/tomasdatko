@@ -1,5 +1,5 @@
 import { SecondLevelPage as SecondLevelPageProps } from "@/app/types";
-import { PageDataProps } from "@/app/types";
+import { PageDataProps, SecondLevelPage } from "@/app/types";
 
 export function constructNavItems(data: PageDataProps) {
   const { general, firstLevelPage } = data;
@@ -17,17 +17,18 @@ export function constructNavItems(data: PageDataProps) {
     .filter((external) => external.topNavVisible)
     .sort((a, b) => a.displayOrder - b.displayOrder);
 
-  firstLevelPage.forEach((page) => {
-    if (page.secondLevelPage) {
-      // Filter secondLevelPages based on topNavVisible
-      const filteredSecondLevelPages = page.secondLevelPage
-        .filter((secondLevel) => secondLevel.topNavVisible)
-        .sort((a, b) => a.displayOrder - b.displayOrder);
+  if (firstLevelPage) {
+    firstLevelPage.forEach((page) => {
+      if (page.secondLevelPage) {
+        // Filter secondLevelPages based on topNavVisible
+        const filteredSecondLevelPages = page.secondLevelPage
+          .filter((secondLevel) => secondLevel.topNavVisible)
+          .sort((a, b) => a.displayOrder - b.displayOrder);
 
-      secondLevelPagesMap[page.id] = filteredSecondLevelPages;
-    }
-  });
-
+        secondLevelPagesMap[page.id] = filteredSecondLevelPages;
+      }
+    });
+  }
   //  console.log("firstLevelPage data:", firstLevelPage);
 
   //  console.log("secondLevelPagesMap:", secondLevelPagesMap);
@@ -35,15 +36,19 @@ export function constructNavItems(data: PageDataProps) {
   // Create the final navigation array
   const navigationArray = sortedTopNavList.map((category) => {
     // Get first level pages that match the current category ID
-    const categoryFirstLevelPages = firstLevelPage
-      .filter((page) => page.topNavListId === category.id && page.topNavVisible)
-      .map((page) => ({
-        id: page.id,
-        displayOrder: page.displayOrder,
-        label: page.navLabel,
-        url: page.url,
-        secondLevelPages: secondLevelPagesMap[page.id] || [],
-      }));
+    const categoryFirstLevelPages =
+      firstLevelPage &&
+      firstLevelPage
+        .filter(
+          (page) => page.topNavListId === category.id && page.topNavVisible
+        )
+        .map((page) => ({
+          id: page.id,
+          displayOrder: page.displayOrder,
+          label: page.navLabel,
+          url: page.url,
+          secondLevelPages: secondLevelPagesMap[page.id] || [],
+        }));
 
     // Include external links in the first level pages
     const categoryExternalLinks = sortedTopNavExternal
@@ -67,7 +72,7 @@ export function constructNavItems(data: PageDataProps) {
       }));
 
     const combinedFirstLevelPages = [
-      ...categoryFirstLevelPages,
+      ...(categoryFirstLevelPages as any[]),
       ...categoryExternalLinks,
     ].sort((a, b) => a.id - b.id);
 
@@ -80,7 +85,7 @@ export function constructNavItems(data: PageDataProps) {
       return {
         ...item,
         id: idCounterFirstLevelPages++,
-        secondLevelPages: item.secondLevelPages.map((subItem) => ({
+        secondLevelPages: item.secondLevelPages.map((subItem: any) => ({
           ...subItem,
           id: idCounterSecondLevelPages++,
         })),
