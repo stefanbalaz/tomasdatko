@@ -1,0 +1,141 @@
+- Original working with grid, before flex modification
+
+"use client";
+import { pageData } from "@/data/pageData";
+import { useEffect } from "react";
+import { constructNavItems } from "@/lib/features/navigation/navigationItems";
+
+export default function TopNavList() {
+  const navItems = constructNavItems(pageData);
+
+  useEffect(() => {
+    const init = async () => {
+      const { Collapse, Dropdown, Ripple, initTWE } = await import(
+        "tw-elements"
+      );
+      initTWE({ Collapse, Dropdown, Ripple });
+    };
+    init();
+  }, []);
+
+  return (
+    <>
+      <nav
+        className="relative flex w-full items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start"
+        data-twe-navbar-ref
+      >
+        {/*   <div className="px-6"> */}
+        <div className="flex w-full flex-wrap items-center justify-between px-3">
+          <button
+            className="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+            type="button"
+            data-twe-collapse-init
+            data-twe-target="#navbarSupportedContent7"
+            aria-controls="navbarSupportedContent7"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
+          </button>
+          <div
+            /* className="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto" */
+            className="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
+            id="navbarSupportedContent7"
+            data-twe-collapse-item
+          >
+            {/*   <ul className="me-auto flex flex-row" data-twe-navbar-nav-ref> */}
+            <ul
+              /*   className="list-style-none ms-auto flex flex-col ps-0 lg:mt-1 lg:flex-row" */
+              className="list-style-none ms-auto flex flex-col ps-0 lg:mt-1 lg:flex-row"
+              data-twe-navbar-nav-ref
+            >
+              {navItems.map((category) => (
+                <li
+                  key={category.id}
+                  /* className="static" */
+                  className="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2"
+                  data-twe-nav-item-ref
+                  data-twe-dropdown-ref
+                >
+                  <a
+                    className="flex items-center whitespace-nowrap py-2 pe-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                    href="#"
+                    type="button"
+                    id={`dropdownMenuButton${category.id}`}
+                    data-twe-dropdown-toggle-ref
+                    aria-expanded="false"
+                    data-twe-nav-link-ref
+                  >
+                    {category.navCategory}
+                    <span className="ms-2 [&>svg]:h-5 [&>svg]:w-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                  <div
+                    className="absolute left-0 right-0 top-full z-[1000] mt-0 hidden w-full border-none bg-white bg-clip-padding data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                    aria-labelledby={`dropdownMenuButton${category.id}`}
+                    data-twe-dropdown-menu-ref
+                  >
+                    <div className="px-6 py-5 lg:px-8">
+                      {/*    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 justify-items-end"> */}
+                      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 justify-items-end">
+                        {category.pages.map((page) => (
+                       
+                          <div key={page.firstLevelPage}>
+                            <a
+                              href="#"
+                              aria-current="true"
+                              className="block w-full border-b border-neutral-100 px-6 py-2 font-semibold uppercase text-neutral-700 dark:border-white/10 dark:text-white hover:bg-zinc-200/60"
+                            >
+                              {page.firstLevelPage}
+                            </a>
+                            {page.secondLevelPage.length > 0 && (
+                              <div>
+                                {page.secondLevelPage.map((subPage) => (
+                                  <a
+                                    key={subPage}
+                                    href="#"
+                                    aria-current="true"
+                                    className="block w-full border-b border-neutral-100 bg-white px-6 py-2 text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:border-white/10 dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                  >
+                                    {subPage}
+                                  </a>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+}

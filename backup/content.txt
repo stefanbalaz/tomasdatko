@@ -1,0 +1,8 @@
+ <div className="block w-full rounded-lg bg-white text-left text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
+      <div className="p-6">
+        <p className="text-base">{currentSecondLevelPage.metaData.title}</p>
+        <p className="text-base">
+          {currentSecondLevelPage.metaData.description}
+        </p>
+      </div>
+    </div>
