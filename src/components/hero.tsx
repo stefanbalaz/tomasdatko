@@ -15,9 +15,9 @@ export default function Hero() {
   const getHeroImageSize = (imageHeight: string): string => {
     switch (imageHeight) {
       case "xs":
-        return "h-[100px] sm:h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px] 2xl:h-[350px]";
+        return "h-[200px] sm:h-[200px] md:h-[250px] lg:h-[250px] xl:h-[300px] 2xl:h-[350px]";
       case "s":
-        return "h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px] xl:h-[350px] 2xl:h-[400px]";
+        return "h-[250px] sm:h-[250px] md:h-[250px] lg:h-[300px] xl:h-[350px] 2xl:h-[400px]";
       case "m":
         return "h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] 2xl:h-[450px]";
       case "l":
