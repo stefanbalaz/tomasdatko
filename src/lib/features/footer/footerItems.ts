@@ -70,7 +70,7 @@ export function constructFooterItems(pageData: PageDataProps) {
   );
 
   // Extract firstLevelPage with footerVisible: true
-  const firstLevelPageFooterVisible = pageData.firstLevelPage
+  /*   const firstLevelPageFooterVisible = pageData.firstLevelPage
     .filter((page) => page.footerVisible)
     .map(
       ({
@@ -79,7 +79,17 @@ export function constructFooterItems(pageData: PageDataProps) {
         url = "",
         footerCategory = "firstLevelPage",
       }) => ({ id, label, url, footerCategory })
-    );
+    ); */
+
+  const firstLevelPageFooterVisible =
+    pageData.firstLevelPage
+      ?.filter((page) => page.footerVisible)
+      .map(({ id, navLabel: label, url = "" }) => ({
+        id,
+        label,
+        url,
+        footerCategory: "firstLevelPage",
+      })) ?? [];
 
   // Extract topNavExternal with footerVisible: true
   const topNavExternalFooterVisible = pageData.general.header.topNavExternal
