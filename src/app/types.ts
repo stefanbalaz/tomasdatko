@@ -214,7 +214,7 @@ interface GoogleAnalytics {
 
 interface LegalConfig {
   entityName: string; // Required
-  legalForm: string;
+  legalForm?: string;
   projectName: string; // Required (appears for example in the cookie - as a cookie name)
   phoneNumber: string;
   eMail: string; // Required
