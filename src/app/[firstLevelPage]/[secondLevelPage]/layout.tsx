@@ -2,11 +2,15 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { pageData } from "@/data/pageData";
 import SecondLevelPage from "./page";
-import { SecondLevelPage as SecondLevelPageProps } from "@/app/types";
+import {
+  SecondLevelPage as SecondLevelPageType,
+  FirstLevelPage,
+} from "@/app/types";
 
 export async function generateStaticParams() {
-  const staticParams = [];
-  for (const firstLevelPage of pageData.firstLevelPage) {
+  const staticParams: { firstLevelPage: string; secondLevelPage: string }[] =
+    [];
+  for (const firstLevelPage of pageData.firstLevelPage as FirstLevelPage[]) {
     if (firstLevelPage.secondLevelPage) {
       staticParams.push(
         ...firstLevelPage.secondLevelPage.map((secondLevelPage) => ({
@@ -28,14 +32,19 @@ any): Promise<any> {
     secondLevelPage: secondLevelPageSlug,
   } = params!;
   const firstLevelPageData = pageData.firstLevelPage.find(
-    (page) => page.url === firstLevelPageSlug
+    (page: { url: string }) => page.url === firstLevelPageSlug
   );
   if (!firstLevelPageData) {
     notFound();
   }
-  const currentSecondLevelPage = firstLevelPageData.secondLevelPage?.find(
-    (page) => page.url === secondLevelPageSlug
-  );
+  const firstLevelPageDataWithSecondLevelPage =
+    firstLevelPageData as FirstLevelPage & {
+      secondLevelPage: SecondLevelPageType[];
+    };
+  const currentSecondLevelPage: any =
+    firstLevelPageDataWithSecondLevelPage.secondLevelPage?.find(
+      (page: any) => page.url === secondLevelPageSlug
+    );
   if (!currentSecondLevelPage) {
     notFound();
   }
@@ -59,14 +68,14 @@ export default function Layout({ params }: any): any {
     firstLevelPage: firstLevelPageSlug,
     secondLevelPage: secondLevelPageSlug,
   } = params!;
-  const firstLevelPageData = pageData.firstLevelPage.find(
+  const firstLevelPageData: any = pageData.firstLevelPage.find(
     (page) => page.url === firstLevelPageSlug
   );
   if (!firstLevelPageData) {
     notFound();
   }
   const currentSecondLevelPage = firstLevelPageData.secondLevelPage?.find(
-    (page) => page.url === secondLevelPageSlug
+    (page: any) => page.url === secondLevelPageSlug
   );
   if (!currentSecondLevelPage) {
     notFound();

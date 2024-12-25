@@ -190,7 +190,7 @@ export interface PageDataProps {
     footer: FooterConfig;
   };
   homePage: HomePageConfig;
-  firstLevelPage: FirstLevelPage[];
+  firstLevelPage?: FirstLevelPage[];
 }
 
 // LEGAL CONFIG START
@@ -601,7 +601,7 @@ export type Block =
 // }
 
 // Define the interface for the first level page
-export interface FirstLevelPage {
+/* export interface FirstLevelPage {
   id: number;
   url: string;
   navLabel?: string;
@@ -620,7 +620,33 @@ export interface FirstLevelPage {
     firstLevelPage: string;
     secondLevelPage: string;
   };
-}
+} */
+
+export type FirstLevelPage = {
+  id: number;
+  url: string;
+  navLabel?: string;
+  topNavListId: number | null; // Accept null or number
+  displayOrder: number | null; // Accept null if applicable
+  topNavVisible: boolean;
+  footerVisible: boolean;
+  layout: string;
+  sidebarNav: SidebarNav;
+  centerText: boolean;
+  metaData: MetaData;
+  footerCategory?: string;
+
+  params?: {
+    firstLevelPage: string;
+    secondLevelPage: string;
+  };
+  hero?: {
+    visible: boolean;
+    type: string;
+  };
+  content?: Section[];
+  secondLevelPage?: SecondLevelPage[]; // Add this line
+};
 
 // Define the interface for the second level page
 export interface SecondLevelPage {
