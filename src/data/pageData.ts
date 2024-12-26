@@ -30,7 +30,7 @@ export const pageData = {
             font: "cervo" as const, // undefined - font inter; works only for global property, or tailwind default fonts "sans", "serif", "mono" or individually added font - fontname like "cinzel", "caveat", etc.
             fontSize: "text-base",
             textColor: "text-textColor",
-            backgroundColor: "bg-primary-light",
+            backgroundColor: "", // bg-primary-light
             designAdditionalClassName: "tracking-wider", // "tracking-wider" tailwind utility applied to spacing between letters
           },
 
@@ -48,7 +48,7 @@ export const pageData = {
 
           header: {
             backgroundColor: "", // bg-tertiary-light
-            textColor: "", // text-primary-dark
+            textColor: "text-yellow-400", // text-primary-dark
             sticky: false,
             designAdditionalClassName: "",
           },
@@ -69,10 +69,10 @@ export const pageData = {
             textColor: "",
           },
           hero: {
-            fullWidth: false,
+            fullWidth: true,
             main: {
               image: {
-                imageHeight: "xs", //full (hero height = full image height), xs, s, m, l, xl, 2xl
+                imageHeight: "m", //full (hero height = full image height), xs, s, m, l, xl, 2xl
                 imgFolder: "/", // "/" for main public folder
                 imgName: "td_main.png", // filename with extension, eg. hero.png
                 imgAlt: "Tomas Datko",
@@ -84,7 +84,7 @@ export const pageData = {
               style: { opacity: "bg-[hsla(0,0%,0%,0.4)]" }, // value "opacity-0" to "opacity-100" (bright/no effect - dark/black); optimal 0.3 or 0.4
               content: {
                 simple: {
-                  visible: true,
+                  visible: false,
                   text: "Seeing beyond moments",
                   position: "left" as HeroContentPosition, //left, center, right
                   divWidth: "w-1/2" as HeroDivWidth, // tailwind utility
