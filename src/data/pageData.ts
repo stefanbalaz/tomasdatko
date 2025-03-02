@@ -160,14 +160,14 @@ export const pageData = {
       entityName: "Tomas Datko", // Required
       legalForm: undefined,
       projectName: "Tomas Datko", // Required (appears for example in the cookie - as a cookie name)
-      phoneNumber: "" /* "+49 162 254 23 09", */,
+      phoneNumber: undefined, /* "+49 162 254 23 09", */,
       eMail: "tom.datko@hotmail.com", // Required
       postalAddress: {
-        streetName: null,
-        streetNumber: null,
-        zipCode: null,
-        city: null,
-        country: null,
+        streetName: undefined,
+        streetNumber: undefined,
+        zipCode: undefined,
+        city: undefined,
+        country: undefined,
       },
       /*  postalAddress: {
         streetName: "Uhlandstraße",

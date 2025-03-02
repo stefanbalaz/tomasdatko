@@ -18,10 +18,10 @@ export default function Footer() {
   // Construct street name and number
   const addressParts = [];
 
-  if (general.legal.postalAddress.streetName)
-    addressParts.push(general.legal.postalAddress.streetName);
-  if (general.legal.postalAddress.streetNumber)
-    addressParts.push(general.legal.postalAddress.streetNumber);
+  if (general?.legal?.postalAddress?.streetName)
+    addressParts.push(general?.legal?.postalAddress?.streetName);
+  if (general?.legal?.postalAddress?.streetNumber)
+    addressParts.push(general?.legal?.postalAddress?.streetNumber);
 
   const streetNameNumber = addressParts.join(" ");
 
