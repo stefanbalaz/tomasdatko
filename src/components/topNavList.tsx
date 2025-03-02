@@ -29,7 +29,7 @@ export default function TopNavList() {
       {/* INITIAL WORKING VERSION */}
 
       <nav
-        className="relative flex w-full items-center justify-between dark:bg-neutral-700 lg:flex-wrap lg:justify-start"
+        className="relative flex w-full items-center justify-between dark:bg-neutral-700 lg:flex-wrap lg:justify-start "
         data-twe-navbar-ref
       >
         <div className="flex w-full flex-wrap items-center justify-end px-3">
@@ -72,7 +72,7 @@ export default function TopNavList() {
             data-twe-collapse-item
           >
             <ul
-              className="list-style-none ms-auto flex flex-col ps-0 lg:mt-1 lg:flex-row"
+              className="list-style-none ms-auto flex flex-col ps-0 lg:mt-1 lg:flex-row "
               data-twe-navbar-nav-ref
             >
               {navItems.map((category) =>
@@ -203,7 +203,7 @@ export default function TopNavList() {
                       <Link
                         /*  className="block py-2 pe-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2" */
                         className={twMerge(
-                          "flex items-center whitespace-nowrap py-2 pe-2 transition duration-200 hover:text-opacity-80 focus:text-opacity-80 active:text-opacity-80 hover:ease-in-out motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2",
+                          "flex items-center whitespace-nowrap py-2 pe-2 transition duration-200 hover:text-opacity-80 focus:text-opacity-80 active:text-opacity-80 hover:ease-in-out motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2 ",
                           topNav?.textColor
                         )}
                         href={

@@ -50,7 +50,7 @@ export const pageData = {
             backgroundColor: "", // bg-tertiary-light
             textColor: "text-yellow-400", // text-primary-dark
             sticky: false,
-            designAdditionalClassName: "",
+            designAdditionalClassName: "font-bold",
           },
           breadcrumbs: {
             backgroundColor: "bg-primary-light",
@@ -74,14 +74,14 @@ export const pageData = {
               image: {
                 imageHeight: "m", //full (hero height = full image height), xs, s, m, l, xl, 2xl
                 imgFolder: "/", // "/" for main public folder
-                imgName: "td_main.png", // filename with extension, eg. hero.png
+                imgName: "horse_dead.png", // filename with extension, eg. hero.png
                 imgAlt: "Tomas Datko",
                 imageWidthPx: "", // image width for nextjs image scaling
                 imageHeightPx: "", // image height for nextjs image scaling
                 designAdditionalClassName: "", // additional css classes for image
               },
 
-              style: { opacity: "bg-[hsla(0,0%,0%,0.4)]" }, // value "opacity-0" to "opacity-100" (bright/no effect - dark/black); optimal 0.3 or 0.4
+              style: { opacity: "bg-[hsla(0,0%,0%,0.5)]" }, // value "opacity-0" to "opacity-100" (bright/no effect - dark/black); optimal 0.3 or 0.4
               content: {
                 simple: {
                   visible: false,
