@@ -160,15 +160,16 @@ export const pageData = {
       entityName: "Tomas Datko", // Required
       legalForm: undefined,
       projectName: "Tomas Datko", // Required (appears for example in the cookie - as a cookie name)
-      phoneNumber: "+49 162 254 23 09",
+      phoneNumber: "" /* "+49 162 254 23 09", */,
       eMail: "tom.datko@hotmail.com", // Required
-      postalAddress: {
+      postalAddress: {},
+      /*  postalAddress: {
         streetName: "Uhlandstraße",
         streetNumber: "130",
         zipCode: "10717",
         city: "Berlin",
         country: "Germany",
-      },
+      }, */
       pageId: {
         // Required for cookie consent
         imprint: 6,
@@ -220,7 +221,7 @@ export const pageData = {
         {
           id: 1,
           label: "About me",
-          displayOrder: 2,
+          displayOrder: 3,
           topNavVisible: true,
           footerVisible: false,
           dropdown: false,
@@ -234,6 +235,15 @@ export const pageData = {
           footerVisible: false,
           dropdown: false,
           url: "exhibition",
+        },
+        {
+          id: 3,
+          label: "Film",
+          displayOrder: 2,
+          topNavVisible: true,
+          footerVisible: false,
+          dropdown: false,
+          url: "film",
         },
       ],
       topNavExternal: [
@@ -269,7 +279,8 @@ export const pageData = {
 
     footer: {
       socialNetworksIntro: "Follow me on social networks:",
-      description: "Turning moments into stories, one frame at a time.",
+      description:
+        "" /* "Turning moments into stories, one frame at a time.", */,
       labels: {
         categories: "Links",
         legal: "Legal",
@@ -286,8 +297,7 @@ export const pageData = {
     layout: "Layout1",
     metaData: {
       title: "Tomas Datko - Personal page",
-      description:
-        "AMATE je osviežujúci sýtený nápoj s vysokým obsahom kofeínu (30 mg na 100 ml), nálevom z listov maté a rastlinnými extraktmi.",
+      description: "Turning moments into stories, one frame at a time.",
     },
     sidebarNav: { visible: false }, // values: undefined, true, false; overwrites the global property
     centerText: true,
@@ -565,15 +575,82 @@ export const pageData = {
       content: [
         {
           type: "section",
-          id: "section1",
+          id: "section6",
           parent: null,
           className: "",
           children: [
             {
+              type: "headline2",
+              className: "",
+              text: "Presented in a solo exhibition, Tomas Datko: Patterns Part 1 - Chronicles of Pain at PS120, Potsdamer Strasse 124",
+            },
+
+            {
+              type: "paragraphGroup",
+              className: "",
+              children: [
+                {
+                  type: "paragraph",
+                  className: "",
+                  children: [
+                    {
+                      type: "text",
+                      text: "(22.08. - 15.09.2024), this series captures the harsh reality of the working horses of Giza, exposing the silent suffering endured under the weight of human indifference. Through a blend of documentary realism and poetic depth, the images confront viewers with the cost of exploitation and the quiet complicity that allows it to persist.",
+                    },
+                  ],
+                },
+                {
+                  type: "paragraph",
+                  className: "",
+                  children: [
+                    {
+                      type: "text",
+                      text: "This work extends beyond photography with a short film, recently selected for the",
+                    },
+                  ],
+                },
+                {
+                  type: "paragraphGroup",
+                  className: "",
+                  children: [
+                    {
+                      type: "paragraph",
+                      className: "",
+                      children: [
+                        {
+                          type: "bold",
+                          text: "2025 Berlin Independent Film Festival",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  type: "paragraph",
+                  className: "",
+                  children: [
+                    {
+                      type: "text",
+                      text: "(12.02. - 18.02.2025). Together, the images and film serve as a call to acknowledge what is too often ignored.",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section1",
+          parent: null,
+          className: "",
+          children: [
+            /*    {
               type: "headline1",
               className: "",
               text: "Patterns of Indifference",
-            },
+            }, */
             {
               type: "video",
             },
@@ -589,9 +666,9 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "The Duality of Labor and Indifference",
+              text: "Gallery",
             },
-            {
+            /*   {
               type: "paragraph",
               className: "",
               children: [
@@ -600,11 +677,11 @@ export const pageData = {
                   text: "The streets of Cairo tell a tale of unspoken struggle—where horses carry the weight of history and tourism. Their lean frames and exhausted eyes speak of endless labor, often overlooked by those seeking the perfect snapshot of the pyramids. Through my lens, I captured the juxtaposition of their strength and the pervasive indifference surrounding their plight.",
                 },
               ],
-            },
+            }, */
             {
               type: "image",
               className: "", // p-4 border-4 border-yellow-500
-              src: "/p4_horse.png",
+              src: "/p4_horse.jpg",
               alt: "Tomas Datko",
             },
           ],
@@ -616,7 +693,7 @@ export const pageData = {
           parent: null,
           className: "",
           children: [
-            {
+            /*    {
               type: "headline2",
               className: "",
               text: "Shadows of Exploitation",
@@ -630,11 +707,11 @@ export const pageData = {
                   text: "Amid the grandeur of ancient monuments, the stark reality of exploitation unfolds. These working horses navigate rocky slopes and blistering sands, often without adequate care or respite. Each frame is a stark reminder of the cost of neglect, highlighting the ethical dilemmas that linger in these environments.",
                 },
               ],
-            },
+            }, */
             {
               type: "image",
               className: "", // p-4 border-4 border-yellow-500
-              src: "/p1_horse.png",
+              src: "/p1_horse.jpg",
               alt: "Tomas Datko",
             },
           ],
@@ -646,7 +723,7 @@ export const pageData = {
           parent: null,
           className: "",
           children: [
-            {
+            /*   {
               type: "headline2",
               className: "",
               text: "Breaking the Silence",
@@ -660,11 +737,11 @@ export const pageData = {
                   text: "Beyond the images lies a story that rarely surfaces—a narrative suppressed by those who benefit from it. The photographs aim to shed light on the hidden pain, challenging the silence maintained by authorities and urging viewers to confront the uncomfortable truths embedded in these moments.",
                 },
               ],
-            },
+            }, */
             {
               type: "image",
               className: "", // p-4 border-4 border-yellow-500
-              src: "/p2_horse.png",
+              src: "/p2_horse.jpg",
               alt: "Tomas Datko",
             },
           ],
@@ -676,7 +753,7 @@ export const pageData = {
           parent: null,
           className: "",
           children: [
-            {
+            /*   {
               type: "headline2",
               className: "",
               text: "A Call for Compassion",
@@ -690,12 +767,246 @@ export const pageData = {
                   text: "Every photograph invites a question: What is our responsibility toward the lives we touch, directly or indirectly? These images are more than documentation; they are a call to action, encouraging empathy and fostering a deeper awareness of the consequences of our choices as travelers and global citizens.",
                 },
               ],
-            },
+            }, */
             {
               type: "image",
               className: "", // p-4 border-4 border-yellow-500
-              src: "/p3_horse.png",
+              src: "/p3_horse.jpg",
               alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section6",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p4_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section7",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p5_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section8",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p6_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section9",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p7_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section10",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p8_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section11",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p9_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section12",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p10_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section13",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p11_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section14",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p12_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section15",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p13_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section16",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p14_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section17",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p15_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section18",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "image",
+              className: "", // p-4 border-4 border-yellow-500
+              src: "/p16_horse.jpg",
+              alt: "Tomas Datko",
+            },
+          ],
+        },
+      ],
+    },
+
+    {
+      id: 3,
+      url: "film",
+      navLabel: "Film",
+      topNavListId: 1,
+      displayOrder: 2,
+      topNavVisible: true,
+      footerVisible: true,
+      layout: "Layout1",
+      sidebarNav: { visible: false },
+      centerText: true,
+      metaData: {
+        title: "Car page title",
+        description: "Car page description",
+      },
+      hero: {
+        visible: false,
+        type: "main", // values: undefined, sub, main
+      },
+      content: [
+        {
+          type: "section",
+          id: "section1",
+          parent: null,
+          className: "",
+          children: [
+            {
+              type: "headline1",
+              className: "",
+              text: "Patterns of Indifference",
+            },
+            {
+              type: "video",
             },
           ],
         },
