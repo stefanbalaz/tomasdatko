@@ -162,20 +162,20 @@ export const pageData = {
       projectName: "Tomas Datko", // Required (appears for example in the cookie - as a cookie name)
       phoneNumber: undefined /* "+49 162 254 23 09", */,
       eMail: "tom.datko@hotmail.com", // Required
-      postalAddress: {
+      /*   postalAddress: {
         streetName: undefined,
         streetNumber: undefined,
         zipCode: undefined,
         city: undefined,
         country: undefined,
-      },
-      /*  postalAddress: {
+      }, */
+      postalAddress: {
         streetName: "Uhlandstraße",
         streetNumber: "130",
         zipCode: "10717",
         city: "Berlin",
         country: "Germany",
-      }, */
+      },
       pageId: {
         // Required for cookie consent
         imprint: 6,
