@@ -74,14 +74,14 @@ export const pageData = {
               image: {
                 imageHeight: "m", //full (hero height = full image height), xs, s, m, l, xl, 2xl
                 imgFolder: "/", // "/" for main public folder
-                imgName: "horse_dead.png", // filename with extension, eg. hero.png
+                imgName: "p14_horse_short.jpg", // filename with extension, eg. hero.png
                 imgAlt: "Tomas Datko",
                 imageWidthPx: "", // image width for nextjs image scaling
                 imageHeightPx: "", // image height for nextjs image scaling
                 designAdditionalClassName: "", // additional css classes for image
               },
 
-              style: { opacity: "bg-[hsla(0,0%,0%,0.5)]" }, // value "opacity-0" to "opacity-100" (bright/no effect - dark/black); optimal 0.3 or 0.4
+              style: { opacity: "bg-[hsla(0,0%,0%,0.3)]" }, // value "opacity-0" to "opacity-100" (bright/no effect - dark/black); optimal 0.3 or 0.4
               content: {
                 simple: {
                   visible: false,
@@ -394,11 +394,11 @@ export const pageData = {
           parent: null,
           className: "",
           children: [
-            {
+            /*        {
               type: "headline1",
               className: "",
               text: "Bio",
-            },
+            }, */
             {
               type: "headline2",
               className: "",
@@ -424,7 +424,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "His solo photography exhibition Patterns:",
+                      text: "His solo photography exhibition",
                     },
                   ],
                 },
@@ -434,7 +434,7 @@ export const pageData = {
                   children: [
                     {
                       type: "bold",
-                      text: "Part 1 - Chronicles of Pain was featured at",
+                      text: "Patterns: Part 1 - Chronicles of Pain",
                     },
                   ],
                 },
@@ -444,7 +444,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "PS120 in Berlin, and his short documentary on the working horses of Giza was selected for the 2025 Berlin Independent Film Festival.",
+                      text: "was featured at PS120 in Berlin, and his short documentary on the working horses of Giza was selected for the 2025 Berlin Independent Film Festival.",
                     },
                   ],
                 },
@@ -495,9 +495,20 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "Presented in a solo exhibition, Tomas Datko: Patterns Part 1 - Chronicles of Pain at PS120, Potsdamer Strasse 124",
+              text: "Presented in a solo exhibition,",
             },
 
+            {
+              type: "headline2",
+              className: "",
+              text: "Tomas Datko: Patterns Part 1 - Chronicles of Pain",
+            },
+
+            {
+              type: "headline2",
+              className: "",
+              text: "at PS120, Potsdamer Strasse 124",
+            },
             {
               type: "paragraphGroup",
               className: "",
@@ -555,32 +566,15 @@ export const pageData = {
 
         {
           type: "section",
-          id: "section1",
-          parent: null,
-          className: "",
-          children: [
-            /*    {
-              type: "headline1",
-              className: "",
-              text: "Patterns of Indifference",
-            }, */
-            {
-              type: "video",
-            },
-          ],
-        },
-
-        {
-          type: "section",
           id: "section2",
           parent: null,
           className: "",
           children: [
-            {
+            /*          {
               type: "headline2",
               className: "",
-              text: "Gallery",
-            },
+              text: "Exhibition",
+            }, */
             /*   {
               type: "paragraph",
               className: "",
@@ -594,7 +588,7 @@ export const pageData = {
             {
               type: "image",
               className: "", // p-4 border-4 border-yellow-500
-              src: "/p4_horse.jpg",
+              src: "/p14_horse.jpg",
               alt: "Tomas Datko",
             },
           ],
@@ -849,7 +843,7 @@ export const pageData = {
             {
               type: "image",
               className: "", // p-4 border-4 border-yellow-500
-              src: "/p14_horse.jpg",
+              src: "/p4_horse.jpg",
               alt: "Tomas Datko",
             },
           ],
@@ -894,15 +888,93 @@ export const pageData = {
       content: [
         {
           type: "section",
-          id: "section1",
+          id: "section6",
           parent: null,
           className: "",
           children: [
             {
+              type: "headline2",
+              className: "",
+              text: "Presented in a solo exhibition,",
+            },
+
+            {
+              type: "headline2",
+              className: "",
+              text: "Tomas Datko: Patterns Part 1 - Chronicles of Pain",
+            },
+
+            {
+              type: "headline2",
+              className: "",
+              text: "at PS120, Potsdamer Strasse 124",
+            },
+            {
+              type: "paragraphGroup",
+              className: "",
+              children: [
+                {
+                  type: "paragraph",
+                  className: "",
+                  children: [
+                    {
+                      type: "text",
+                      text: "(22.08. - 15.09.2024), this series captures the harsh reality of the working horses of Giza, exposing the silent suffering endured under the weight of human indifference. Through a blend of documentary realism and poetic depth, the images confront viewers with the cost of exploitation and the quiet complicity that allows it to persist.",
+                    },
+                  ],
+                },
+                {
+                  type: "paragraph",
+                  className: "",
+                  children: [
+                    {
+                      type: "text",
+                      text: "This work extends beyond photography with a short film, recently selected for the",
+                    },
+                  ],
+                },
+                {
+                  type: "paragraphGroup",
+                  className: "",
+                  children: [
+                    {
+                      type: "paragraph",
+                      className: "",
+                      children: [
+                        {
+                          type: "bold",
+                          text: "2025 Berlin Independent Film Festival",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  type: "paragraph",
+                  className: "",
+                  children: [
+                    {
+                      type: "text",
+                      text: "(12.02. - 18.02.2025). Together, the images and film serve as a call to acknowledge what is too often ignored.",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+
+        {
+          type: "section",
+          id: "section1",
+          parent: null,
+          className: "",
+          children: [
+            /*    {
               type: "headline1",
               className: "",
               text: "Patterns of Indifference",
-            },
+            }, */
             {
               type: "video",
             },
@@ -913,8 +985,8 @@ export const pageData = {
 
     {
       id: 6,
-      url: "impressum",
-      navLabel: "Impressum",
+      url: "imprint",
+      navLabel: "Imprint",
       topNavListId: null,
       displayOrder: null,
       topNavVisible: false,
@@ -924,8 +996,8 @@ export const pageData = {
       centerText: true,
       layout: "Layout1",
       metaData: {
-        title: "Impressum",
-        description: "Impressum",
+        title: "Imprint",
+        description: "Imprint",
       },
       content: [
         {
@@ -937,7 +1009,7 @@ export const pageData = {
             {
               type: "headline1",
               className: "",
-              text: "Impressum",
+              text: "Imprint",
             },
             {
               type: "paragraphGroup",
@@ -949,7 +1021,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "AMATE je značka 3-Logy s.r.o.",
+                      text: "Tomas Datko",
                     },
                   ],
                 },
@@ -959,7 +1031,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "951 62 Nevidzany 187",
+                      text: "Uhlandstraße 130",
                     },
                   ],
                 },
@@ -969,7 +1041,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "IČO: 50 776 231, IČ DPH: SK2120460144 podľa §4",
+                      text: "10717 Berlin",
                     },
                   ],
                 },
@@ -979,36 +1051,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Zapísaná na Nitra, odd. Sro, vl.č.42737/N, dátum vzniku: 7. marca 2017",
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-        {
-          type: "section",
-          id: "section2",
-          parent: "section1",
-          className: "",
-          children: [
-            {
-              type: "headline2",
-              className: "",
-              text: "Kontakt",
-            },
-            {
-              type: "paragraphGroup",
-              className: "",
-              children: [
-                {
-                  type: "paragraph",
-                  className: "",
-                  children: [
-                    {
-                      type: "text",
-                      text: "www.amate.sk",
+                      text: "📧 E-Mail: tom.datko@hotmail.com",
                     },
                   ],
                 },
@@ -1018,7 +1061,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "info@amate.sk",
+                      text: "📞 Phone: +49 162 254 23 09",
                     },
                   ],
                 },
@@ -1028,7 +1071,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Ing. Juraj Baláž",
+                      text: "Responsible for the content according to § 55 Abs. 2 RStV:",
                     },
                   ],
                 },
@@ -1038,7 +1081,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "+421 (0) 911 561 885",
+                      text: "Tomas Datko, Uhlandstraße 130, 10717 Berlin",
                     },
                   ],
                 },
@@ -1062,8 +1105,8 @@ export const pageData = {
       centerText: true,
       layout: "Layout1",
       metaData: {
-        title: "Ochrana osobných údajov",
-        description: "Ochrana osobných údajov",
+        title: "Data Privacy",
+        description: "Data Privacy Policy",
       },
       content: [
         {
@@ -1075,7 +1118,7 @@ export const pageData = {
             {
               type: "headline1",
               className: "",
-              text: "Ochrana osobných údajov",
+              text: "Data Privacy Policy",
             },
           ],
         },
@@ -1088,7 +1131,7 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "1. Úvod",
+              text: "1. Introduction",
             },
             {
               type: "paragraphGroup",
@@ -1100,7 +1143,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Tento dokument (ďalej len „Dokument“) popisuje spôsob, akým zbierame, používame a chránime osobné údaje, ktoré nám poskytnete pri používaní tejto webovej stránky (ďalej len „Stránka“). Tento Dokument je záväzný pre každého, kto navštevuje alebo používa Stránku.",
+                      text: "This document (hereinafter referred to as the 'Document') describes how we collect, use, and protect personal data you provide when using this website (hereinafter referred to as the 'Website'). This Document is binding for all visitors and users of the Website.",
                     },
                   ],
                 },
@@ -1117,9 +1160,8 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "2. Zodpovednosť za spracovanie osobných údajov",
+              text: "2. Data Controller",
             },
-
             {
               type: "paragraphGroup",
               className: "",
@@ -1130,23 +1172,19 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Prevádzkovateľom Stránky a zodpovedným za spracovanie osobných údajov je ",
+                      text: "The operator of this Website and the entity responsible for data processing is ",
                     },
                     {
                       type: "bold",
-                      text: "3-Logy s.r.o. ",
+                      text: "Tomas Datko",
                     },
                     {
                       type: "text",
-                      text: "s adresou ",
+                      text: " located at ",
                     },
                     {
                       type: "bold",
-                      text: "951 62 Nevidzany 187 ",
-                    },
-                    {
-                      type: "text",
-                      text: "(ďalej len „Prevádzkovateľ“).",
+                      text: "Uhlandstraße 130, 10717 Berlin.",
                     },
                   ],
                 },
@@ -1163,7 +1201,7 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "3. Kategórie spracovávaných osobných údajov",
+              text: "3. Categories of Personal Data Processed",
             },
             {
               type: "paragraphGroup",
@@ -1175,7 +1213,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Pri používaní Stránky môžeme zbierať nasledujúce kategórie osobných údajov:",
+                      text: "When using the Website, we may collect the following categories of personal data:",
                     },
                   ],
                 },
@@ -1188,11 +1226,11 @@ export const pageData = {
                       children: [
                         {
                           type: "bold",
-                          text: "Technické údaje: ",
+                          text: "Technical Data: ",
                         },
                         {
                           type: "text",
-                          text: "IP adresa, typ prehliadača, jazykové nastavenia, typ operačného systému, čas prístupu k Stránke.",
+                          text: "IP address, browser type, language settings, operating system type, access time to the Website.",
                         },
                       ],
                     },
@@ -1205,7 +1243,7 @@ export const pageData = {
                         },
                         {
                           type: "text",
-                          text: "Súbory cookies slúžia na sledovanie preferencií používateľa, zlepšenie navigácie na Stránke a zasielanie relevantných informácií. Používanie cookies je detailne popísané v časti 5 tohto Dokumentu.",
+                          text: "Cookies help track user preferences, enhance navigation on the Website, and provide relevant information.",
                         },
                       ],
                     },
@@ -1224,7 +1262,7 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "4. Účely spracovania osobných údajov",
+              text: "4. Purposes of Personal Data Processing",
             },
             {
               type: "paragraphGroup",
@@ -1236,7 +1274,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Osobné údaje zbierame a spracovávame za účelom:",
+                      text: "We collect and process personal data for the following purposes:",
                     },
                   ],
                 },
@@ -1249,11 +1287,11 @@ export const pageData = {
                       children: [
                         {
                           type: "bold",
-                          text: "Zabezpečenia prevádzky Stránky: ",
+                          text: "Ensuring Website Operation: ",
                         },
                         {
                           type: "text",
-                          text: "Na základe našich oprávnených záujmov zabezpečiť funkčnosť a bezpečnosť Stránky.",
+                          text: "Based on our legitimate interests, to ensure the functionality and security of the Website.",
                         },
                       ],
                     },
@@ -1262,11 +1300,11 @@ export const pageData = {
                       children: [
                         {
                           type: "bold",
-                          text: "Analytické účely: ",
+                          text: "Analytical Purposes: ",
                         },
                         {
                           type: "text",
-                          text: "Používanie Google Analytics na analýzu návštevnosti a chovania používateľov, čo nám pomáha zlepšiť obsah a služby poskytované na Stránke.",
+                          text: "Using Google Analytics to analyze traffic and user behavior, helping us improve the content and services offered on the Website.",
                         },
                       ],
                     },
@@ -1275,11 +1313,11 @@ export const pageData = {
                       children: [
                         {
                           type: "bold",
-                          text: "Komunikácie: ",
+                          text: "Communication: ",
                         },
                         {
                           type: "text",
-                          text: "Na základe vášho súhlasu, ak si zvolíte prihlásenie k odberu noviniek alebo iných komunikačných foriem.",
+                          text: "Based on your consent, if you opt to subscribe to newsletters or other forms of communication.",
                         },
                       ],
                     },
@@ -1298,7 +1336,7 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "5. Súbory cookies a Google Analytics",
+              text: "5. Cookies and Google Analytics",
             },
             {
               type: "paragraphGroup",
@@ -1310,23 +1348,11 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Pri používaní Stránky môžeme využívať súbory cookies a Google Analytics na zaznamenávanie informácií o vašej návšteve a interakcii so Stránkou. Cookies sú malé textové súbory, ktoré sa ukladajú do vášho prehliadača a umožňujú nám identifikovať vás pri opätovnej návšteve Stránky a prispôsobiť obsah vašim záujmom.",
+                      text: "When using the Website, we may use cookies and Google Analytics to record information about your visit and interaction with the Website. Cookies are small text files that are stored in your browser, allowing us to identify you on subsequent visits to the Website and tailor content to your interests.",
                     },
-                  ],
-                },
-              ],
-            },
-            {
-              type: "paragraphGroup",
-              className: "",
-              children: [
-                {
-                  type: "paragraph",
-                  className: "",
-                  children: [
                     {
                       type: "text",
-                      text: "Google Analytics je služba poskytovaná spoločnosťou Google, ktorá nám poskytuje štatistiky o návštevnosti Stránky a umožňuje nám lepšie porozumieť vašim preferenciám a správaniu sa na Stránke.",
+                      text: "Google Analytics is a service provided by Google that gives us statistics about Website traffic and allows us to better understand your preferences and behavior on the Website.",
                     },
                   ],
                 },
@@ -1343,7 +1369,7 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "6. Právny základ spracovania osobných údajov",
+              text: "6. Legal Basis for Personal Data Processing",
             },
             {
               type: "paragraphGroup",
@@ -1355,7 +1381,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Spracovanie osobných údajov je založené na:",
+                      text: "The processing of personal data is based on:",
                     },
                   ],
                 },
@@ -1368,11 +1394,11 @@ export const pageData = {
                       children: [
                         {
                           type: "bold",
-                          text: "Váš súhlas: ",
+                          text: "Your consent: ",
                         },
                         {
                           type: "text",
-                          text: "Pri používaní cookies, ak to vyžaduje platná legislatíva.",
+                          text: "When using cookies, if required by applicable legislation.",
                         },
                       ],
                     },
@@ -1381,11 +1407,11 @@ export const pageData = {
                       children: [
                         {
                           type: "bold",
-                          text: "Našich oprávnených záujmoch: ",
+                          text: "Our legitimate interests: ",
                         },
                         {
                           type: "text",
-                          text: "Na zabezpečenie prevádzky a zlepšenie Stránky.",
+                          text: "To ensure the operation and improvement of the Website.",
                         },
                       ],
                     },
@@ -1404,7 +1430,7 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "7. Vaše práva",
+              text: "7. Your Rights",
             },
             {
               type: "paragraphGroup",
@@ -1416,7 +1442,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Podľa platných právnych predpisov máte právo:",
+                      text: "According to applicable legal regulations, you have the right to:",
                     },
                   ],
                 },
@@ -1429,7 +1455,7 @@ export const pageData = {
                       children: [
                         {
                           type: "text",
-                          text: "Požadovať prístup k vašim osobným údajom a informácie o ich spracovaní.",
+                          text: "Request access to your personal data and information about its processing.",
                         },
                       ],
                     },
@@ -1438,7 +1464,7 @@ export const pageData = {
                       children: [
                         {
                           type: "text",
-                          text: "Požiadať o opravu nesprávnych alebo neúplných údajov.",
+                          text: "Request correction of inaccurate or incomplete data.",
                         },
                       ],
                     },
@@ -1447,7 +1473,7 @@ export const pageData = {
                       children: [
                         {
                           type: "text",
-                          text: "Vymazať vaše osobné údaje, ak neexistuje žiadny oprávnený dôvod na ich ďalšie spracovanie.",
+                          text: "Delete your personal data if there is no legitimate reason for its further processing.",
                         },
                       ],
                     },
@@ -1456,7 +1482,7 @@ export const pageData = {
                       children: [
                         {
                           type: "text",
-                          text: "Obmedziť spracovanie vašich osobných údajov v určitých situáciách.",
+                          text: "Restrict the processing of your personal data in certain situations.",
                         },
                       ],
                     },
@@ -1465,7 +1491,7 @@ export const pageData = {
                       children: [
                         {
                           type: "text",
-                          text: "Namietať proti spracovaniu vašich osobných údajov.",
+                          text: "Object to the processing of your personal data.",
                         },
                       ],
                     },
@@ -1484,7 +1510,7 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "8. Kontaktné údaje",
+              text: "8. Contact Information",
             },
             {
               type: "paragraphGroup",
@@ -1496,41 +1522,29 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Ak máte otázky alebo požiadavky týkajúce sa ochrany osobných údajov alebo tohto Dokumentu, prosím, kontaktujte nás na:",
+                      text: "If you have any questions or requests regarding data protection or this Document, please contact us at:",
                     },
                   ],
                 },
                 {
-                  type: "paragraphGroup",
+                  type: "bulletList",
                   className: "",
                   children: [
                     {
-                      type: "paragraph",
-                      className: "",
+                      type: "bulletItem",
                       children: [
                         {
                           type: "bold",
-                          text: "3-Logy s.r.o., 951 62 Nevidzany 187",
+                          text: "Tomas Datko, Uhlandstraße 130, 10717 Berlin.",
                         },
                       ],
                     },
-                  ],
-                },
-                {
-                  type: "paragraphGroup",
-                  className: "",
-                  children: [
                     {
-                      type: "paragraph",
-                      className: "",
+                      type: "bulletItem",
                       children: [
                         {
-                          type: "text",
-                          text: "Email: ",
-                        },
-                        {
                           type: "bold",
-                          text: "info@3-logy.com",
+                          text: "Email: tom.datko@hotmail.com",
                         },
                       ],
                     },
@@ -1549,7 +1563,7 @@ export const pageData = {
             {
               type: "headline2",
               className: "",
-              text: "9. Zmeny v ochrane osobných údajov",
+              text: "9. Changes to Data Protection",
             },
             {
               type: "paragraphGroup",
@@ -1561,23 +1575,11 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "Tento Dokument môže byť čas od času aktualizovaný. Aktuálna verzia Dokumentu je vždy k dispozícii na Stránke.",
+                      text: "This Document may be updated from time to time. The current version of the Document is always available on the Website.",
                     },
-                  ],
-                },
-                {
-                  type: "paragraphGroup",
-                  className: "",
-                  children: [
                     {
-                      type: "paragraph",
-                      className: "",
-                      children: [
-                        {
-                          type: "bold",
-                          text: "Dátum poslednej aktualizácie: 16.7.2024",
-                        },
-                      ],
+                      type: "text",
+                      text: " Last updated: 8.3.2025",
                     },
                   ],
                 },
@@ -1587,7 +1589,6 @@ export const pageData = {
         },
       ],
     },
-
     {
       id: 8,
       url: "Content",

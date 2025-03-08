@@ -218,7 +218,7 @@ export default function Cookie() {
       //     },
       //   },
       // },
-      language: {
+      /*       language: {
         default: "sk",
         translations: {
           sk: {
@@ -302,35 +302,104 @@ export default function Cookie() {
                     ],
                   },
                 },
-                // {
-                //   title: "Marketingové",
-                //   description:
-                //     "Tieto cookies zhromažďujú informácie o tom, ako používate našu webovú stránku, aby vám mohli zobrazovať personalizované reklamy. Umožňujú aj meranie úspešnosti reklamných kampaní. Tieto cookies môžu byť použité na vytvorenie vášho používateľského profilu a zobrazenie relevantného obsahu.",
-                //   linkedCategory: "marketing",
-                //   cookieTable: {
-                //     caption: "Tabuľka cookies",
-                //     headers: {
-                //       name: "Cookie",
-                //       domain: "Doména",
-                //       desc: "Popis",
-                //     },
-                //     body: [
-                //       {
-                //         name: "_gads",
-                //         domain: location.hostname,
-                //         desc: "Tento súbor cookie používa Google AdSense na zobrazovanie personalizovaných reklám na základe vašej aktivity na tejto a ďalších webových stránkach.",
-                //       },
-                //       {
-                //         name: "IDE",
-                //         domain: "doubleclick.net",
-                //         desc: "Tento súbor cookie používa Google DoubleClick na vyhodnocovanie účinnosti reklamných kampaní a na zlepšenie cielenia reklám.",
-                //       },
-                //     ],
-                //   },
-                // },
                 {
                   title: "Ďalšie informácie",
                   description: `Ak máte otázky týkajúce sa našej politiky cookies a vašich možností, kontaktujte nás prosím na adrese <a href="mailto:${eMail}">${eMail}</a>.`,
+                },
+              ],
+            },
+          },
+        },
+      },
+    });
+  }, */
+
+      language: {
+        default: "en",
+        translations: {
+          en: {
+            consentModal: {
+              title: "Data Privacy Preferences",
+              description: `
+            Before you can proceed to our website, we need your consent.<br/>
+            If you are under 16 years old and wish to give consent for optional services, you must ask your legal guardians for permission.<br/>
+            On our website, we use cookies and other technologies. Some are essential, while others help us improve this website and your user experience. Personal data may be processed (e.g., IP addresses) for the purpose of personalized advertisements and content or measuring advertisements and content. For more information on how your data is used, please refer to our <a href="/${dataPrivacyUrl}" target="_blank">privacy policy</a>. It is not mandatory to consent to the processing of your data for the use of this offered product. You can change or adjust your choice at any time in the settings. However, some features of the website may not be available due to individual settings.<br/>
+            <hr style="border-top: 1px solid #ccc; margin: 10px 0;"/>
+            <span style="font-size: 0.9em;">
+              Some services process personal data in the USA. By consenting to the use of these services, you also agree to the processing of your data in the USA under Art. 49 (1) (a) GDPR. The European Court of Justice considers the USA to be a country with an insufficient level of personal data protection according to EU standards. There is, for example, a risk that U.S. authorities may process personal data within surveillance programs with no possibility of complaint for EU citizens.<br/>
+            </span>
+          `,
+              acceptAllBtn: "I agree to all cookies",
+              acceptNecessaryBtn: "Accept only necessary cookies",
+              showPreferencesBtn: "Individual data privacy settings",
+              closeIconLabel: "Close and reject all",
+              footer: `
+            <a href="/${imprintUrl}" target="_blank">Imprint</a>
+            <a href="/${dataPrivacyUrl}" target="_blank">Privacy Policy</a>
+          `,
+            },
+            preferencesModal: {
+              title: "Data Privacy Preferences",
+              acceptAllBtn: "I agree to all cookies",
+              acceptNecessaryBtn: "Accept only necessary cookies",
+              savePreferencesBtn: "Save current settings",
+              closeIconLabel: "Close modal window",
+              serviceCounterLabel: "Service|Services",
+              sections: [
+                {
+                  title: "Your data privacy preferences",
+                  description: `Here you will find an overview of all the cookies used. You can give consent or view more details and select specific cookies.`,
+                },
+                {
+                  title: "Necessary",
+                  description:
+                    "These cookies are essential for the proper functioning of the website and cannot be disabled.",
+                  linkedCategory: "necessary",
+                  cookieTable: {
+                    caption: "Cookie Table",
+                    headers: {
+                      name: "Cookie",
+                      domain: "Domain",
+                      desc: "Description",
+                    },
+                    body: [
+                      {
+                        name: projectName,
+                        domain: location.hostname,
+                        desc: "This cookie stores the user's consent preferences regarding cookies on this website. It saves whether the user has accepted or rejected specific categories of cookies.",
+                      },
+                    ],
+                  },
+                },
+                {
+                  title: "Functional",
+                  description:
+                    "These cookies collect information about how you use our website. All data is anonymized and cannot be used to identify you.",
+                  linkedCategory: "analytics",
+                  cookieTable: {
+                    caption: "Cookie Table",
+                    headers: {
+                      name: "Cookie",
+                      domain: "Domain",
+                      desc: "Description",
+                    },
+                    body: [
+                      {
+                        name: "_ga",
+                        domain: location.hostname,
+                        desc: "This cookie is used by Google Analytics to distinguish users and limit the number of requests. It helps track website usage and performance metrics.",
+                      },
+                      {
+                        name: "_gid",
+                        domain: location.hostname,
+                        desc: "This cookie is used by Google Analytics to distinguish users. It stores and updates a unique value for each visited page.",
+                      },
+                    ],
+                  },
+                },
+                {
+                  title: "More Information",
+                  description: `If you have any questions about our cookie policy and your options, please contact us at <a href="mailto:${eMail}">${eMail}</a>.`,
                 },
               ],
             },

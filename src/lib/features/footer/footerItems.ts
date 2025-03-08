@@ -69,18 +69,9 @@ export function constructFooterItems(pageData: PageDataProps) {
     "topNavList" // Assigning a category, change as needed
   );
 
-  // Extract firstLevelPage with footerVisible: true
-  /*   const firstLevelPageFooterVisible = pageData.firstLevelPage
-    .filter((page) => page.footerVisible)
-    .map(
-      ({
-        id,
-        navLabel: label,
-        url = "",
-        footerCategory = "firstLevelPage",
-      }) => ({ id, label, url, footerCategory })
-    ); */
+  console.log("topNavListFooterVisible", topNavListFooterVisible);
 
+  // Extract firstLevelPage with footerVisible: true
   const firstLevelPageFooterVisible =
     pageData.firstLevelPage
       ?.filter((page) => page.footerVisible)
@@ -88,8 +79,10 @@ export function constructFooterItems(pageData: PageDataProps) {
         id,
         label,
         url,
-        footerCategory: "firstLevelPage",
+        footerCategory: "firstLevelPage" || "legal",
       })) ?? [];
+
+  console.log("firstLevelPageFooterVisible", firstLevelPageFooterVisible);
 
   // Extract topNavExternal with footerVisible: true
   const topNavExternalFooterVisible = pageData.general.header.topNavExternal
@@ -113,12 +106,16 @@ export function constructFooterItems(pageData: PageDataProps) {
         ), // Sub items
     ]);
 
+  console.log("topNavExternalFooterVisible", topNavExternalFooterVisible);
+
   // Combine all results into one array
   const combinedArray = [
     ...topNavListFooterVisible,
     ...firstLevelPageFooterVisible,
     ...topNavExternalFooterVisible,
   ];
+
+  console.log("combinedArray", combinedArray);
 
   // Function to update IDs incrementally from 1
   const updateIds = (items: any[]) =>

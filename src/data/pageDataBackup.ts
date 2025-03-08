@@ -1360,8 +1360,8 @@ export const pageData = {
 
     {
       id: 6,
-      url: "impressum",
-      navLabel: "Impressum",
+      url: "imprint",
+      navLabel: "Imprint",
       topNavListId: null,
       displayOrder: null,
       topNavVisible: false,
@@ -1371,8 +1371,8 @@ export const pageData = {
       centerText: true,
       layout: "Layout1",
       metaData: {
-        title: "Impressum",
-        description: "Impressum",
+        title: "Imprint",
+        description: "Imprint",
       },
       content: [
         {
@@ -1384,7 +1384,7 @@ export const pageData = {
             {
               type: "headline1",
               className: "",
-              text: "Impressum",
+              text: "Imprint",
             },
             {
               type: "paragraphGroup",
