@@ -230,6 +230,7 @@ interface LegalConfig {
 interface SocialMediaLinks {
   facebook?: string;
   instagram?: string;
+  blogger?: string;
   twitter?: string;
   google?: string;
   linkedin?: string;

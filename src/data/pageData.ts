@@ -148,7 +148,7 @@ export const pageData = {
             designAdditionalClassName: "", // applied to the entire footer div
           },
           socialMedia: {
-            color: false, // specific icon color will be applied, otherwise text color
+            color: true, // specific icon color will be applied, otherwise text color
             designAdditionalClassName:
               "[&>svg]:h-8 [&>svg]:w-8 text-yellow-400", // applied to the icon; eg the size can be adjusted (default size: [&>svg]:h-4 [&>svg]:w-4)
           },
@@ -189,8 +189,9 @@ export const pageData = {
     socialMedia: {
       link: {
         // if link not defined, the icon does not appear
-        facebook: "https://www.facebook.com/",
-        instagram: "https://www.instagram.com/",
+        facebook: "",
+        instagram: "https://www.instagram.com/tomidatko/",
+        blogger: "https://tddatko.blogspot.com/",
         twitter: "",
         google: "",
         linkedin: "",

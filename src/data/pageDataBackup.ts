@@ -179,6 +179,7 @@ export const pageData = {
         // if link not defined, the icon does not appear
         facebook: "https://www.facebook.com/",
         instagram: "https://www.instagram.com/",
+        blogger: "https://tddatko.blogspot.com/",
         twitter: "",
         google: "",
         linkedin: "",
