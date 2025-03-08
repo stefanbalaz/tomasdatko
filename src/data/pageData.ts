@@ -226,12 +226,12 @@ export const pageData = {
       topNavList: [
         {
           id: 1,
-          label: "About me",
+          label: "Bio",
           displayOrder: 3,
           topNavVisible: true,
           footerVisible: false,
           dropdown: false,
-          url: "about-me",
+          url: "bio",
         },
         {
           id: 2,
@@ -369,8 +369,8 @@ export const pageData = {
 
     {
       id: 1,
-      url: "about-me",
-      navLabel: "About me",
+      url: "bio",
+      navLabel: "Bio",
       topNavListId: 1,
       displayOrder: 1,
       topNavVisible: true,
@@ -379,7 +379,7 @@ export const pageData = {
       sidebarNav: { visible: false },
       centerText: true,
       metaData: {
-        title: "Tomas Datko",
+        title: "Tomas Datko - Bio",
         description: "Tomas Datko about me page",
       },
       hero: {
@@ -477,7 +477,7 @@ export const pageData = {
       sidebarNav: { visible: false },
       centerText: true,
       metaData: {
-        title: "Tomas Datko",
+        title: "Tomas Datko - Exhibition",
         description:
           "Tomas Datko is a photographer, writer, and filmmaker currently based in Berlin.",
       },
@@ -884,7 +884,7 @@ export const pageData = {
       sidebarNav: { visible: false },
       centerText: true,
       metaData: {
-        title: "Tomas Datko",
+        title: "Tomas Datko - Film",
         description: "Film page",
       },
       hero: {
