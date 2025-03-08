@@ -386,6 +386,7 @@ export const pageData = {
         visible: false,
         type: "main", // values: undefined, sub, main
       },
+
       content: [
         {
           type: "section",
@@ -396,69 +397,12 @@ export const pageData = {
             {
               type: "headline1",
               className: "",
-              text: "Finding Meaning Through the Lens",
+              text: "Bio",
             },
-            {
-              type: "paragraphImage",
-              className: "",
-              children: [
-                {
-                  type: "paragraphGroup",
-                  className: "",
-                  children: [
-                    {
-                      type: "paragraph",
-                      className: "",
-                      children: [
-                        {
-                          type: "text",
-                          text: "I am a Berlin-based photographer whose journey has been shaped by a deep commitment to storytelling and visual exploration. Over the years, I have cultivated my craft through diverse experiences, from fashion photography to fine arts, and across industries that have enriched my perspective. My professional path has taken me across continents, providing a unique global lens that informs my work. Whether working in Spain, the United States, or Germany, I’ve sought to bring authenticity and emotional resonance to every project.",
-                        },
-                      ],
-                    },
-                    {
-                      type: "paragraph",
-                      className: "",
-                      children: [
-                        {
-                          type: "text",
-                          text: "Initially, my artistic focus revolved around the pursuit of beauty and aesthetics, with my work often grounded in the worlds of fashion and media. These fields allowed me to refine my technical expertise and develop a deep appreciation for composition, light, and narrative. However, I always felt there was a dimension missing—a desire to explore deeper truths about the human condition and the ethical responsibilities we share as a global community. Over time, I transitioned into a style of photography that doesn’t just capture beauty but also provokes thought and challenges assumptions.",
-                        },
-                      ],
-                    },
-                    {
-                      type: "paragraph",
-                      className: "",
-                      children: [
-                        {
-                          type: "text",
-                          text: "My early career laid a solid foundation for this evolution. The technical skills I gained while working as a creative photography assistant in London and a picture editor for Men’s Health Magazine gave me the tools to master visual storytelling. Yet, it wasn’t until I stepped out of the controlled environments of studios and fashion shoots that I began to embrace the unpredictability of the real world. This shift marked a turning point in my artistic voice, one that continues to evolve and deepen.",
-                        },
-                      ],
-                    },
-                  ],
-                },
-                {
-                  type: "image",
-                  className: "", // p-4 border-4 border-yellow-500
-                  src: "/tomas-datko.jpeg",
-                  alt: "Tomas Datko",
-                },
-              ],
-            },
-          ],
-        },
-
-        {
-          type: "section",
-          id: "section2",
-          parent: null,
-          className: "",
-          children: [
             {
               type: "headline2",
               className: "",
-              text: "Confronting Indifference Through Art",
+              text: "Tomas Datko is a photographer, writer, and filmmaker currently based in Berlin.",
             },
             {
               type: "paragraphGroup",
@@ -470,75 +414,7 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "A pivotal moment in my career came during a transformative trip to Egypt. While photographing working horses transporting tourists to the pyramids of Giza, I was confronted with stark images of exploitation and apathy. Emaciated horses struggled under the weight of heavy-set tourists, trudging up rocky paths where a single misstep could mean a life-ending injury. Witnessing this cycle of suffering—and the indifference surrounding it—left an indelible mark on me. It was a harsh reminder of how often we, as humans, turn a blind eye to the suffering that sustains our pleasures.",
-                    },
-                  ],
-                },
-                {
-                  type: "paragraphGroup",
-                  className: "",
-                  children: [
-                    {
-                      type: "paragraph",
-                      className: "",
-                      children: [
-                        {
-                          type: "text",
-                          text: "This experience inspired my solo exhibition in Berlin, ",
-                        },
-                        {
-                          type: "italic",
-                          text: "Working Horses: Transporting Tourists to the Pyramids of Giza. ",
-                        },
-                        {
-                          type: "text",
-                          text: "The collection explored the intersection of labor, cruelty, and global indifference, challenging viewers to confront these uncomfortable realities. At first, the reception was hesitant; many visitors admitted the images were difficult to face. Yet, the discomfort sparked conversations about ethical responsibility and the human capacity for empathy. The exhibition became a space for reflection, reminding me of the power of art to not only document but also to provoke change.",
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-
-        {
-          type: "section",
-          id: "section3",
-          parent: null,
-          className: "",
-          children: [
-            {
-              type: "headline2",
-              className: "",
-              text: "Inspiring Connection and Awareness",
-            },
-            {
-              type: "paragraphGroup",
-              className: "",
-              children: [
-                {
-                  type: "paragraphGroup",
-                  className: "",
-                  children: [
-                    {
-                      type: "paragraph",
-                      className: "",
-                      children: [
-                        {
-                          type: "text",
-                          text: "For me, photography is more than just a craft; ",
-                        },
-                        {
-                          type: "bold",
-                          text: "it is a medium for connection and reflection. ",
-                        },
-                        {
-                          type: "text",
-                          text: "My career has taken me through diverse disciplines, from working as a security head at international events to crafting media campaigns. These experiences have shaped my perspective, showing me the many ways in which stories can be told and the importance of visual narratives in shaping human understanding. Today, my work is focused on capturing raw, unfiltered moments that reveal the complexities of life and human emotion.",
-                        },
-                      ],
+                      text: "Born in 1980s Czechoslovakia, he grew up navigating cultural displacement, which shaped his artistic lens. After an early career in international fashion modeling, he transitioned into photography and storytelling, using his work to explore themes of identity, resilience, and transformation.",
                     },
                   ],
                 },
@@ -548,7 +424,37 @@ export const pageData = {
                   children: [
                     {
                       type: "text",
-                      text: "My artistic journey continues to challenge me to look beyond surface aesthetics and delve into stories that resonate deeply. Whether I am documenting the stark realities of life or crafting a thought-provoking narrative, I aim to inspire awareness and understanding. Photography, at its best, serves as a bridge between worlds—connecting viewers to experiences, emotions, and truths they might otherwise never encounter. Through my lens, I strive to break down the barriers of indifference and remind us all of the power of compassion.",
+                      text: "His solo photography exhibition Patterns:",
+                    },
+                  ],
+                },
+                {
+                  type: "paragraph",
+                  className: "",
+                  children: [
+                    {
+                      type: "bold",
+                      text: "Part 1 - Chronicles of Pain was featured at",
+                    },
+                  ],
+                },
+                {
+                  type: "paragraph",
+                  className: "",
+                  children: [
+                    {
+                      type: "text",
+                      text: "PS120 in Berlin, and his short documentary on the working horses of Giza was selected for the 2025 Berlin Independent Film Festival.",
+                    },
+                  ],
+                },
+                {
+                  type: "paragraph",
+                  className: "",
+                  children: [
+                    {
+                      type: "text",
+                      text: "Beyond photography, Tomas is working on a collection of fictional short stories, including Coop Coup, a satirical exploration of loneliness through anthropomorphism, and a memoir reflecting on Asperger's, mental health, and personal growth, all told with his signature humor and sarcasm. He is also developing a film intertwining the lives of Peruvian butterflies with themes of mental health and spiritual transformation.",
                     },
                   ],
                 },
@@ -958,21 +864,6 @@ export const pageData = {
               type: "image",
               className: "", // p-4 border-4 border-yellow-500
               src: "/p15_horse.jpg",
-              alt: "Tomas Datko",
-            },
-          ],
-        },
-
-        {
-          type: "section",
-          id: "section18",
-          parent: null,
-          className: "",
-          children: [
-            {
-              type: "image",
-              className: "", // p-4 border-4 border-yellow-500
-              src: "/p16_horse.jpg",
               alt: "Tomas Datko",
             },
           ],
