@@ -196,11 +196,11 @@ export interface PageDataProps {
 // LEGAL CONFIG START
 
 interface PostalAddress {
-  streetName: string;
-  streetNumber: string;
-  zipCode: string;
-  city: string;
-  country: string;
+  streetName?: string;
+  streetNumber?: string;
+  zipCode?: string;
+  city?: string;
+  country?: string;
 }
 
 interface PageId {
@@ -216,9 +216,9 @@ interface LegalConfig {
   entityName: string; // Required
   legalForm?: string;
   projectName: string; // Required (appears for example in the cookie - as a cookie name)
-  phoneNumber: string;
-  eMail: string; // Required
-  postalAddress: PostalAddress;
+  phoneNumber?: string;
+  eMail?: string; // Required
+  postalAddress?: PostalAddress;
   pageId: PageId; // Required for cookie consent
   googleAnalytics: GoogleAnalytics; // Required
 }

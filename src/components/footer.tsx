@@ -16,14 +16,14 @@ export default function Footer() {
     selectedDesignStyle || {};
 
   // Construct street name and number
-  const addressParts = [];
+  const addressParts: string[] = [];
 
   if (general?.legal?.postalAddress?.streetName)
     addressParts.push(general?.legal?.postalAddress?.streetName);
   if (general?.legal?.postalAddress?.streetNumber)
     addressParts.push(general?.legal?.postalAddress?.streetNumber);
 
-  const streetNameNumber = addressParts.join(" ");
+  const streetNameNumber = addressParts?.join(" ");
 
   const fullPostalAddress = (
     <>
