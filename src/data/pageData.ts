@@ -379,8 +379,8 @@ export const pageData = {
       sidebarNav: { visible: false },
       centerText: true,
       metaData: {
-        title: "Car page title",
-        description: "Car page description",
+        title: "Tomas Datko",
+        description: "Tomas Datko about me page",
       },
       hero: {
         visible: false,
@@ -477,8 +477,9 @@ export const pageData = {
       sidebarNav: { visible: false },
       centerText: true,
       metaData: {
-        title: "Car page title",
-        description: "Car page description",
+        title: "Tomas Datko",
+        description:
+          "Tomas Datko is a photographer, writer, and filmmaker currently based in Berlin.",
       },
       hero: {
         visible: false,
@@ -883,8 +884,8 @@ export const pageData = {
       sidebarNav: { visible: false },
       centerText: true,
       metaData: {
-        title: "Car page title",
-        description: "Car page description",
+        title: "Tomas Datko",
+        description: "Film page",
       },
       hero: {
         visible: false,
