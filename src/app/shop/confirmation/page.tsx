@@ -54,7 +54,7 @@ export default function Confirmation({
 
   const cartItems = useSelector((state: RootState) => state.cart.items);
 
-  console.log("cartItems CONFIRMATION", cartItems);
+  /*   console.log("cartItems CONFIRMATION", cartItems); */
 
   // Fetch product data and set loading
   useEffect(() => {
@@ -92,7 +92,7 @@ export default function Confirmation({
       .filter(Boolean); // Filter out any null values (in case product data wasn't found)
   }, [cartItems, products, loading]);
 
-  console.log("Final Cart Data:", finalCartData);
+  /*   console.log("Final Cart Data:", finalCartData); */
 
   if (loading) {
     return <p>Loading products...</p>;

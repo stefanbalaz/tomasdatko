@@ -47,8 +47,8 @@ export const cartSlice = createSlice({
       }
 
       // Log for debugging
-      console.log("Before Update:", [...state.items]); // Before the action is processed
-      console.log("After Update:", [...state.items]); // After the action is processed
+/*       console.log("Before Update:", [...state.items]); // Before the action is processed
+      console.log("After Update:", [...state.items]); // After the action is processed */
     },
 
     updateAmount: (

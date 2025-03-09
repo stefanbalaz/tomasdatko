@@ -24,7 +24,7 @@ export default function Shop() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.items);
 
-  console.log("cartItems", cartItems);
+  /*   console.log("cartItems", cartItems); */
 
   // START
 
@@ -98,7 +98,7 @@ export default function Shop() {
     const currentAmount =
       cartItems.find((item) => item.id === product._id)?.amount || 0;
     const newAmount = currentAmount + increment;
-    console.log("newAmount", newAmount);
+    /*   console.log("newAmount", newAmount); */
     dispatch(updateAmount({ id: product._id, amount: newAmount }));
   };
 
